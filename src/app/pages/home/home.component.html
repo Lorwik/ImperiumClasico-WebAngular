@@ -1,0 +1,43 @@
+<div class="content">
+    <div *ngFor="let noticia of Noticias.reverse(); let i = index">
+        <ul class="articles">
+            <li>
+                <h2> <a>{{noticia.titulo}}</a> <span>({{noticia.fecha}})</span> </h2>
+                <a><img src="assets/images/character-1-home.png" alt=""></a>
+                    {{noticia.contenido}}
+                    <br>
+                    Atte. <b>{{noticia.autor}}</b>
+                    <br><br>
+            </li>
+        </ul>
+        <ul class="paging">
+            <li class="first">
+                <a href="index.html">Primero</a>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="index.html" class="active">1</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="last">
+                <a href="index.html">Ultimo</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="sidebar">
+    <h1><span>Servidores</span></h1>
+    <ul class="items">
+        <li>
+            <a><img src="assets/images/boots-of-mage.png" alt=""></a>
+            <h2><a>Offline</a></h2>
+        </li>
+        <li>
+            <a><img src="assets/images/cloack-of-wizardry.png" alt=""></a>
+            <h2><a>Offline</a></h2>
+        </li>
+    </ul>
+</div>
