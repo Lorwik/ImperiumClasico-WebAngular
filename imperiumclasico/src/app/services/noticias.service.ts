@@ -8,7 +8,7 @@ import { Noticias } from '../interfaces/noticias.interface';
 export class NoticiasService {
 
   //url: string = 'http://192.168.1.5/news/';
-  url: string = '../news/';
+  url: string = 'https://api.comunidadwinter.com.ar/news/';
 
   public noticias: Noticias[] = [];
 
