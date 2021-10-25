@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Noticias } from '../interfaces/noticias.interface';
 
 @Injectable({
@@ -13,6 +13,8 @@ export class NoticiasService {
   public noticias: Noticias[] = [];
 
   constructor(private http: HttpClient) { }
+
+  httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
 
   obtenernoticias(){
     return this.http.get<Noticias[]>(`${this.url}news.php?n=impc`)
