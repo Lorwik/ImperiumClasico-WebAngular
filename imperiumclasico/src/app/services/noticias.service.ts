@@ -7,8 +7,8 @@ import { Noticias } from '../interfaces/noticias.interface';
 })
 export class NoticiasService {
 
-  //apiurl: string = 'http://192.168.1.5/news/';
-  apiurl: string = 'https://api.comunidadwinter.com.ar/news/';
+  //url: string = 'http://192.168.1.5/news/';
+  url: string = 'https://api.comunidadwinter.com.ar/news/';
 
   public noticias: Noticias[] = [];
 
@@ -17,7 +17,7 @@ export class NoticiasService {
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
 
   obtenernoticias(){
-    return this.http.get<Noticias[]>(`${this.apiurl}news.php?n=impc`)
+    return this.http.get<Noticias[]>(`${this.url}news.php?n=impc`)
     .subscribe((resp) => {
       this.noticias = resp;
     });
